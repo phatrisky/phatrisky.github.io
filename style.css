@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.top-bar {
+  background-color: #1f1f1f;
+  border-bottom-style:solid;
+  border-color: #ff4500;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 40px;
+}
+
+img.invert {
+  filter: invert(100%);
+}
+
+.header-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.header-buttons button {
+  background-color: #b8860b;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.menu-toggle {
+  display: block;
+  background-color: #b8860b;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.side-bar {
+  background-color: #1f1f1f;
+  border-right-style: solid;
+  border-color: #ff4500;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  bottom: 1rem;
+  width: 200px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.side-bar ul {
+  margin-top: 8rem;
+}
+
+aside.side-bar, nav.navbar, ul.nav, ul.navmenu, li a {
+  color: #b8860b;
+}
+
+.side-bar.active {
+  transform: translateX(0);
+}
+
+.sidebar-buttons {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar-buttons button {
+  background-color: #ff4500;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.content {
+  margin-left: 220px;
+  padding: 1rem;
+}
+
+.footer {
+  background-color: #1f1f1f;
+  border-top-style: solid;
+  border-color: #ff4500;
+  padding: 1rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: block;
+  }
+
+  .side-bar {
+      width: 100%;
+      height: auto;
+      position: fixed;
+      top: 0;
+      bottom: auto;
+      transform: translateY(-100%);
+  }
+
+  .side-bar.active {
+      transform: translateY(0);
+  }
+
+  .content {
+      margin-left: 0;
+      padding-top: 60px;
+  }
+}
