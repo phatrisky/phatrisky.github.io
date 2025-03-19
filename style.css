@@ -5,13 +5,7 @@ body {
   color: #ffffff;
 }
 
-li a img {
-  display: flex;
-  margin: 0 50%;
-  transform: translateX(-50%);
-}
-
-.top-bar {
+header.top-bar {
   background-color: #1f1f1f;
   border-bottom-style:solid;
   border-color: #eb1958;
@@ -20,7 +14,7 @@ li a img {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  z-index: 1000;
+  z-index: 2000;
 }
 
 nav ul {
@@ -30,7 +24,23 @@ nav ul {
   display: flex; /* ทำให้รายการเรียงกันในแนวนอน */
   border-radius: 5px; /* ขอบมน */
   justify-content: center; /* จัดรายการให้อยู่ตรงกลาง */
-  background-color: #000530; /* สีพื้นหลัง */
+  background-color: #00000000; /* สีพื้นหลัง */
+}
+
+nav#h.header-buttons {
+  margin: 0 0;
+  transform: translateY(-25%);
+}
+
+nav#h ul li a img {
+  display: flex;
+  margin: 0 50%;
+  transform: translateX(-50%);
+}
+
+nav#h ul li a {
+  margin: -50% 0;
+  transform: translateY(50%);
 }
 
 ืnav#v ul#sidemenu {
@@ -111,6 +121,7 @@ img.invert {
   width: 200px;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
+  z-index: 1000;
 }
 
 .side-bar ul {
@@ -119,6 +130,10 @@ img.invert {
 
 .side-bar.active {
   transform: translateX(0);
+}
+
+main.content {
+  margin-left: 0;
 }
 
 .sidebar-buttons {
@@ -151,6 +166,7 @@ img.invert {
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 2000;
 }
 
 @media (max-width: 768px) {
