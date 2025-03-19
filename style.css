@@ -5,16 +5,69 @@ body {
   color: #ffffff;
 }
 
+li a img {
+  margin-right: 20px;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .top-bar {
   background-color: #1f1f1f;
   border-bottom-style:solid;
-  border-color: #ff4500;
+  border-color: #eb1958;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
   z-index: 1000;
+}
+
+nav ul {
+  list-style: none; /* เอาสัญลักษณ์หัวข้อย่อยออก */
+  padding: 0;
+  margin: 0;
+  display: flex; /* ทำให้รายการเรียงกันในแนวนอน */
+  border-radius: 5px; /* ขอบมน */
+  justify-content: center; /* จัดรายการให้อยู่ตรงกลาง */
+  background-color: #121212; /* สีพื้นหลัง */
+}
+
+ืnav#v ul#sidemenu {
+  height: 10em;
+}
+
+nav#v ul {
+  flex-direction: column; /* ให้การแสดงผลประเภทนี้มาเป็นแนวตั้ง */
+}
+
+nav#v ul li a {
+  display: flex;
+  align-items: center;
+  width: 10em;
+}
+
+nav#v ul li {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+nav#h ul li {
+  margin: 5px; /* ระยะห่างระหว่างรายการ */
+}
+
+nav ul li a {
+  display: block; /* ทำให้ลิงก์เต็มพื้นที่ของ li */
+  padding: 10px 20px; /* ระยะห่างภายในปุ่ม */
+  text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+  background-color: #ffc445; /* สีพื้นหลังปุ่ม */
+  color: white; /* สีตัวอักษร */
+  border-radius: 5px; /* ขอบมน */
+  text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+  transition: background-color 0.3s ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
 }
 
 .logo img {
@@ -31,7 +84,7 @@ img.invert {
 }
 
 .header-buttons button {
-  background-color: #b8860b;
+  background-color: #ffc445;
   color: #ffffff;
   border: none;
   padding: 0.5rem 1rem;
@@ -41,7 +94,7 @@ img.invert {
 
 .menu-toggle {
   display: block;
-  background-color: #b8860b;
+  background-color: #ffc445;
   color: #ffffff;
   border: none;
   padding: 0.5rem 1rem;
@@ -52,7 +105,7 @@ img.invert {
 .side-bar {
   background-color: #1f1f1f;
   border-right-style: solid;
-  border-color: #ff4500;
+  border-color: #eb1958;
   padding: 1rem;
   position: fixed;
   top: 0;
@@ -64,10 +117,6 @@ img.invert {
 
 .side-bar ul {
   margin-top: 8rem;
-}
-
-aside.side-bar, nav.navbar, ul.nav, ul.navmenu, li a {
-  color: #b8860b;
 }
 
 .side-bar.active {
@@ -82,7 +131,7 @@ aside.side-bar, nav.navbar, ul.nav, ul.navmenu, li a {
 }
 
 .sidebar-buttons button {
-  background-color: #ff4500;
+  background-color: #eb1958;
   color: #ffffff;
   border: none;
   padding: 0.5rem 1rem;
@@ -98,7 +147,7 @@ aside.side-bar, nav.navbar, ul.nav, ul.navmenu, li a {
 .footer {
   background-color: #1f1f1f;
   border-top-style: solid;
-  border-color: #ff4500;
+  border-color: #eb1958;
   padding: 1rem;
   text-align: center;
   position: fixed;
