@@ -1,15 +1,24 @@
+
+@font-face {
+  font-family: sov-monomon; /* ชื่อฟอนต์ */
+  src: url('font/SOV_monomon-hinted.ttf') format('truetype'), /* ที่อยู่ของฟอนต์ */ 
+       url('SOV_monospace-hinted.ttf') format('truetype'); /* ที่อยู่ของฟอนต์ */
+  font-weight: normal; /* น้ำหนักฟอนต์ */
+  font-style: normal; /* รูปแบบฟอนต์ */
+}
+
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'sov-monomon', sans-serif;
   background-color: #0e0e0e;
   color: #ffffff;
 }
 
 header.top-bar {
-  background-color: #1f1f1f;
+  background-color: #0e0e0e;
   border-bottom-style:solid;
   border-color: #eb1958;
-  padding: 1rem;
+  padding: 0.6rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,59 +32,73 @@ nav ul {
   margin: 0;
   display: flex; /* ทำให้รายการเรียงกันในแนวนอน */
   border-radius: 5px; /* ขอบมน */
-  justify-content: center; /* จัดรายการให้อยู่ตรงกลาง */
-  background-color: #00000000; /* สีพื้นหลัง */
+  background-color: #eb1958; /* สีพื้นหลัง */
+  li {
+    margin: 5px; /* ระยะห่างระหว่างรายการ */
+    a {
+      display: block; /* ทำให้ลิงก์เต็มพื้นที่ของ li */
+      padding: 10px 20px; /* ระยะห่างภายในปุ่ม */
+      text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+      background-color: #ffc445; /* สีพื้นหลังปุ่ม */
+      color: white; /* สีตัวอักษร */
+      border-radius: 5px; /* ขอบมน */
+      text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+      transition: background-color color filter 0.3s ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
+      display: block; /* ทำให้ลิงก์เต็มพื้นที่ของ li */
+    }
+    a:hover {
+      background-color: #ffffff; /* สีพื้นหลังเมื่อเม้าส์ไปชี้ */
+      color: #000000; /* สีตัวอักษรเมื่อเม้าส์ไปชี้ */
+      img {
+        filter: invert(0%); /* สีภาพของรูปเมื่อเม้าส์ไปชี้ */
+      }
+    }
+  }
 }
 
-nav#h.header-buttons {
-  margin: 0 0;
-  transform: translateY(-25%);
-}
-
-nav#h ul li a img {
+nav#h ul {
   display: flex;
-  margin: 0 50%;
-  transform: translateX(-50%);
-}
-
-nav#h ul li a {
-  margin: -50% 0;
-  transform: translateY(50%);
-}
-
-ืnav#v ul#sidemenu {
-  height: 10em;
+  align-items: center; /* จัดรายการให้อยู่ตรงกลางในแนวนอน */
+  flex-direction: row;
+  li {
+    display: flex;
+    margin: 5px;
+    align-items: center; /* จัดรายการให้อยู่ตรงกลางในแนวนอน */
+    justify-content: center;
+    a {
+      display: flex;
+      align-items: center;
+      width: 6em;
+      padding-right: 0.8em;
+      text-wrap: wrap; /* ข้อความขึ้นบรรทัดใหม่เมื่อเต็ม */
+      img {
+        width: 1.3em;
+        height: 1.3em;
+        display: flex;
+        margin: 0 -5px;
+        transform: translate(-50%, 5%);
+      }
+    }
+  }
 }
 
 nav#v ul {
+  display: flex;
+  justify-content: center; /* จัดรายการให้อยู่ตรงกลางในแนวตั้ง */
   flex-direction: column; /* ให้การแสดงผลประเภทนี้มาเป็นแนวตั้ง */
-}
-
-nav#v ul li a {
-  display: flex;
-  align-items: center;
-  width: 10em;
-}
-
-nav#v ul li {
-  display: flex;
-  justify-content: center;
-  margin: 5px;
-}
-
-nav#h ul li {
-  margin: 5px; /* ระยะห่างระหว่างรายการ */
-}
-
-nav ul li a {
-  display: block; /* ทำให้ลิงก์เต็มพื้นที่ของ li */
-  padding: 10px 20px; /* ระยะห่างภายในปุ่ม */
-  text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
-  background-color: #ffc445; /* สีพื้นหลังปุ่ม */
-  color: white; /* สีตัวอักษร */
-  border-radius: 5px; /* ขอบมน */
-  text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
-  transition: background-color 0.3s ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
+  #sidemenu {
+    height: 10em;
+  }
+  li {
+    display: flex;
+    justify-content: center;
+    margin: 6px;
+    a {
+      display: flex;
+      align-items: center;
+      width: 10em;
+    }
+  }
 }
 
 .logo img {
@@ -89,15 +112,14 @@ img.invert {
 .header-buttons {
   display: flex;
   gap: 0.5rem;
-}
-
-.header-buttons button {
-  background-color: #ffc445;
-  color: #ffffff;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 5px;
+  button {
+    background-color: #ffc445;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
 }
 
 .menu-toggle {
@@ -111,7 +133,7 @@ img.invert {
 }
 
 .side-bar {
-  background-color: #1f1f1f;
+  background-color: #0e0e0e;
   border-right-style: solid;
   border-color: #eb1958;
   padding: 1rem;
@@ -119,21 +141,51 @@ img.invert {
   top: 0;
   bottom: 1rem;
   width: 200px;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-  z-index: 1000;
+  transform: translateX(-100%); /* ทำให้เมนูเลื่อนออกไป */
+  transition: transform 0.3s ease; /* เพิ่มเอฟเฟกต์การเลื่อน */
+  z-index: 1000; /* ทำให้เมนูอยู่ด้านหน้า */
+}
+
+.side-bar.active { /* สถานะเมนูเมื่อถูกเปิด */
+  transform: translateX(0); /* ทำให้เมนูเลื่อนเข้ามา */
 }
 
 .side-bar ul {
-  margin-top: 8rem;
+  margin-top: 8rem; /* ระยะห่างด้านบนของรายการ */
 }
 
-.side-bar.active {
-  transform: translateX(0);
+header {
+  button {
+    transition: background-color color filter 0.3s ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
+  }
+  button:hover img {
+    filter: invert(0%); /* สีภาพของรูปเมื่อเม้าส์ไปชี้ */
+  }
+  button:hover {
+    background-color: #ffffff; /* สีพื้นหลังเมื่อเม้าส์ไปชี้ */
+    color: #000000; /* สีตัวอักษรเมื่อเม้าส์ไปชี้ */
+  }
+}
+
+aside {
+  button {
+    transition: background-color color filter 0.3s ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
+  }
+  button:hover img {
+    filter: invert(0%); /* สีภาพของรูปเมื่อเม้าส์ไปชี้ */
+  }
+  button:hover {
+    background-color: #ffffff; /* สีพื้นหลังเมื่อเม้าส์ไปชี้ */
+    color: #000000; /* สีตัวอักษรเมื่อเม้าส์ไปชี้ */
+  }
 }
 
 main.content {
   margin-left: 0;
+}
+
+button {
+  font-family: 'sov-monomon', sans-serif;
 }
 
 .sidebar-buttons {
@@ -141,24 +193,44 @@ main.content {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-}
-
-.sidebar-buttons button {
-  background-color: #eb1958;
-  color: #ffffff;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-}
+  button {
+    background-color: #eb1958;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+} 
 
 .content {
   margin-left: 220px;
   padding: 1rem;
+  text-wrap: wrap; /* ข้อความขึ้นบรรทัดใหม่เมื่อเต็ม */
+  transition: background-color color filter 0.3s ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
+  p {
+    a.button {
+      color: #ffffff; /* สีข้อความ */
+      padding: 4px 12px; /* ระยะห่างภายในปุ่ม */
+      text-align: center; /* จัดตำแหน่งข้อความ */
+      text-decoration: none; /* ลบขีดเส้นใต้ลิงค์ */
+      display: inline-block; /* ทำให้ปุ่มอยู่ในบรรทัดเดียว */
+      font-size: 16px; /* ขนาดตัวอักษร */
+      border-radius: 7.5px; /* มุมโค้งของปุ่ม */
+      border-style: solid; /* ขนาดขอบปุ่ม */
+      border-color: #ffffff; /* สีขอบปุ่ม */
+      transition: background-color color filter 0.3s ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
+    }
+    a.button:hover {
+      background-color: #ffffff;
+      color: #000000; /* สีข้อความเมื่อเม้าส์ไปชี้ */
+      filter: invert(0%);
+    }
+  }
 }
 
 .footer {
-  background-color: #1f1f1f;
+  background-color: #0e0e0e;
   border-top-style: solid;
   border-color: #eb1958;
   padding: 1rem;
