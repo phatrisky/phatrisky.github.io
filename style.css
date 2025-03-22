@@ -250,6 +250,8 @@ button {
 
   header h1 {
     transform: translateX(25%);
+    line-break: anywhere;
+    line-height: 0;
     color: transparent;
   }
 
