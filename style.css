@@ -1,4 +1,17 @@
 
+:root {
+  --color-primary: #eb1958; /* สีหลัก */
+  --color-secondary: #ffc445; /* สีรอง */
+  --color-background: #0e0e0e; /* สีพื้นหลัง */
+  --color-text: #ffffff; /* สีข้อความ */
+  --color-border: #eb1958; /* สีขอบ */
+  --color-button-bg: #ffc445; /* สีพื้นหลังปุ่ม */
+  --color-button-text: #ffffff; /* สีข้อความปุ่ม */
+  --color-button-hover-bg: #ffffff; /* สีพื้นหลังปุ่มเมื่อเม้าส์ไปชี้ */
+  --color-button-hover-text: #000000; /* สีข้อความปุ่มเมื่อเม้าส์ไปชี้ */
+  --delay-second: 0.75s; /* เวลาหน่วง */
+}
+
 @font-face {
   font-family: sov-monomon; /* ชื่อฟอนต์ */
   src: url('font/SOV_monomon-hinted.ttf') format('truetype'), /* ที่อยู่ของฟอนต์ */ 
@@ -10,45 +23,47 @@
 body {
   margin: 0;
   font-family: 'sov-monomon', sans-serif;
-  background-color: #0e0e0e;
-  color: #ffffff;
+  background-color: var(--color-background); /* สีพื้นหลัง */
+  color: var(--color-text); /* สีข้อความ */
 }
 
 header.top-bar {
-  background-color: #0e0e0e;
+  background-color: var(--color-background); /* สีพื้นหลัง */
   border-bottom-style:solid;
-  border-color: #eb1958;
+  border-color: var(--color-border);
   padding: 0.6rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
   z-index: 2000;
+  max-height: 30px;
 }
 
 nav ul {
   list-style: none; /* เอาสัญลักษณ์หัวข้อย่อยออก */
-  padding: 0;
-  margin: 0;
+  padding: 2px;
   display: flex; /* ทำให้รายการเรียงกันในแนวนอน */
   border-radius: 5px; /* ขอบมน */
-  background-color: #eb1958; /* สีพื้นหลัง */
+  border-color: var(--color-border); /* สีขอบ */
+  border-style: solid; /* สไตล์ขอบ */
+  border-width: 2px; /* ขนาดขอบ */
   li {
-    margin: 5px; /* ระยะห่างระหว่างรายการ */
+    margin: 2px; /* ระยะห่างระหว่างรายการ */
     a {
       display: block; /* ทำให้ลิงก์เต็มพื้นที่ของ li */
       padding: 10px 20px; /* ระยะห่างภายในปุ่ม */
       text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
-      background-color: #ffc445; /* สีพื้นหลังปุ่ม */
-      color: white; /* สีตัวอักษร */
+      background-color: var(--color-button-bg); /* สีพื้นหลังปุ่ม */
+      color: var(--color-button-text); /* สีตัวอักษร */
       border-radius: 5px; /* ขอบมน */
       text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
-      transition: background-color color filter 0.3s ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
+      transition: background-color color filter var(--delay-second) ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
       display: block; /* ทำให้ลิงก์เต็มพื้นที่ของ li */
     }
     a:hover {
-      background-color: #ffffff; /* สีพื้นหลังเมื่อเม้าส์ไปชี้ */
-      color: #000000; /* สีตัวอักษรเมื่อเม้าส์ไปชี้ */
+      background-color: var(--color-button-hover-bg); /* สีพื้นหลังเมื่อเม้าส์ไปชี้ */
+      color: var(--color-button-hover-text); /* สีตัวอักษรเมื่อเม้าส์ไปชี้ */
       img {
         filter: invert(0%); /* สีภาพของรูปเมื่อเม้าส์ไปชี้ */
       }
@@ -59,10 +74,9 @@ nav ul {
 nav#h ul {
   display: flex;
   align-items: center; /* จัดรายการให้อยู่ตรงกลางในแนวนอน */
-  flex-direction: row;
+  flex-direction: row; /* ให้การแสดงผลประเภทนี้มาเป็นแนวนอน */
   li {
     display: flex;
-    margin: 5px;
     align-items: center; /* จัดรายการให้อยู่ตรงกลางในแนวนอน */
     justify-content: center;
     a {
@@ -70,7 +84,6 @@ nav#h ul {
       align-items: center;
       width: 6em;
       height: 10px;
-      padding-right: 0.8em;
       text-wrap: wrap; /* ข้อความขึ้นบรรทัดใหม่เมื่อเต็ม */
       img {
         width: 1.3em;
@@ -93,7 +106,6 @@ nav#v ul {
   li {
     display: flex;
     justify-content: center;
-    margin: 6px;
     a {
       display: flex;
       align-items: center;
@@ -102,8 +114,10 @@ nav#v ul {
   }
 }
 
-.logo img {
-  height: 40px;
+img[src*="logo"] {
+  width: 40%;
+  height: auto;
+  display: flex;
 }
 
 img.invert {
@@ -114,8 +128,8 @@ img.invert {
   display: flex;
   gap: 0.5rem;
   button {
-    background-color: #ffc445;
-    color: #ffffff;
+    background-color: var(--color-button-bg);
+    color: var(--color-button-text);
     border: none;
     padding: 0.5rem 1rem;
     cursor: pointer;
@@ -125,8 +139,8 @@ img.invert {
 
 .menu-toggle {
   display: block;
-  background-color: #ffc445;
-  color: #ffffff;
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -134,9 +148,9 @@ img.invert {
 }
 
 .side-bar {
-  background-color: #0e0e0e;
+  background-color: var(--color-background);
   border-right-style: solid;
-  border-color: #eb1958;
+  border-color: var(--color-border);
   padding: 1rem;
   position: fixed;
   top: 0.25rem;
@@ -164,8 +178,8 @@ header {
     filter: invert(0%); /* สีภาพของรูปเมื่อเม้าส์ไปชี้ */
   }
   button:hover {
-    background-color: #ffffff; /* สีพื้นหลังเมื่อเม้าส์ไปชี้ */
-    color: #000000; /* สีตัวอักษรเมื่อเม้าส์ไปชี้ */
+    background-color: var(--color-button-hover-bg); /* สีพื้นหลังเมื่อเม้าส์ไปชี้ */
+    color: var(--color-button-hover-text); /* สีตัวอักษรเมื่อเม้าส์ไปชี้ */
   }
 }
 
@@ -177,8 +191,8 @@ aside {
     filter: invert(0%); /* สีภาพของรูปเมื่อเม้าส์ไปชี้ */
   }
   button:hover {
-    background-color: #ffffff; /* สีพื้นหลังเมื่อเม้าส์ไปชี้ */
-    color: #000000; /* สีตัวอักษรเมื่อเม้าส์ไปชี้ */
+    background-color: var(--color-button-hover-bg); /* สีพื้นหลังเมื่อเม้าส์ไปชี้ */
+    color: var(--color-button-hover-text); /* สีตัวอักษรเมื่อเม้าส์ไปชี้ */
   }
 }
 
@@ -196,8 +210,8 @@ button {
   flex-direction: column;
   gap: 0.5rem;
   button {
-    background-color: #eb1958;
-    color: #ffffff;
+    background-color: var(--color-border);
+    color: var(--color-button-text);
     border: none;
     padding: 0.5rem 1rem;
     cursor: pointer;
@@ -209,10 +223,10 @@ button {
   margin-left: 220px;
   padding: 1rem;
   text-wrap: wrap; /* ข้อความขึ้นบรรทัดใหม่เมื่อเต็ม */
-  transition: background-color color filter 0.3s ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
+  transition: background-color color filter var(--delay-second) ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
   p {
     a.button {
-      color: #ffffff; /* สีข้อความ */
+      color: var(--color-button-text); /* สีข้อความ */
       padding: 4px 12px; /* ระยะห่างภายในปุ่ม */
       text-align: center; /* จัดตำแหน่งข้อความ */
       text-decoration: none; /* ลบขีดเส้นใต้ลิงค์ */
@@ -220,21 +234,21 @@ button {
       font-size: 16px; /* ขนาดตัวอักษร */
       border-radius: 7.5px; /* มุมโค้งของปุ่ม */
       border-style: solid; /* ขนาดขอบปุ่ม */
-      border-color: #ffffff; /* สีขอบปุ่ม */
-      transition: background-color color filter 0.3s ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
+      border-color: var(--color-button-text); /* สีขอบปุ่ม */
+      transition: background-color color filter var(--delay-second) ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
     }
     a.button:hover {
-      background-color: #ffffff;
-      color: #000000; /* สีข้อความเมื่อเม้าส์ไปชี้ */
+      background-color: var(--color-button-hover-bg); /* สีพื้นหลังเมื่อเม้าส์ไปชี้ */
+      color: var(--color-button-hover-text); /* สีข้อความเมื่อเม้าส์ไปชี้ */
       filter: invert(0%);
     }
   }
 }
 
 .footer {
-  background-color: #0e0e0e;
+  background-color: var(--color-background); /* สีพื้นหลัง */
   border-top-style: solid;
-  border-color: #eb1958;
+  border-color: var(--color-border);
   padding: 1rem;
   text-align: center;
   position: fixed;
