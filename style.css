@@ -27,6 +27,11 @@ body {
   color: var(--color-text); /* สีข้อความ */
 }
 
+a {
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+}
+
 header.top-bar {
   background-color: var(--color-background); /* สีพื้นหลัง */
   border-bottom-style:solid;
@@ -52,7 +57,7 @@ nav ul {
     margin: 2px; /* ระยะห่างระหว่างรายการ */
     a {
       display: block; /* ทำให้ลิงก์เต็มพื้นที่ของ li */
-      padding: 7px; /* ระยะห่างภายในปุ่ม */
+      padding: 10px 20px; /* ระยะห่างภายในปุ่ม */
       text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
       background-color: var(--color-button-bg); /* สีพื้นหลังปุ่ม */
       color: var(--color-button-text); /* สีตัวอักษร */
