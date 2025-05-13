@@ -58,7 +58,7 @@ nav ul {
       color: var(--color-button-text); /* สีตัวอักษร */
       border-radius: 5px; /* ขอบมน */
       text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
-      transition: background-color color filter var(--delay-second) ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
+      transition: all var(--delay-second) ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
       display: block; /* ทำให้ลิงก์เต็มพื้นที่ของ li */
     }
     a:hover {
@@ -158,7 +158,7 @@ img.invert {
   width: 175px;
   height: 100%;
   transform: translateX(-100%); /* ทำให้เมนูเลื่อนออกไป */
-  transition: transform 0.3s ease; /* เพิ่มเอฟเฟกต์การเลื่อน */
+  transition: all var(--delay-second) ease; /* เพิ่มเอฟเฟกต์การเลื่อน */
   z-index: 1000; /* ทำให้เมนูอยู่ด้านหน้า */
 }
 
@@ -172,7 +172,7 @@ img.invert {
 
 header {
   button {
-    transition: background-color color filter 0.3s ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
+    transition: all var(--delay-second) ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
   }
   button:hover img {
     filter: invert(0%); /* สีภาพของรูปเมื่อเม้าส์ไปชี้ */
@@ -185,7 +185,7 @@ header {
 
 aside {
   button {
-    transition: background-color color filter 0.3s ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
+    transition: all var(--delay-second) ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
   }
   button:hover img {
     filter: invert(0%); /* สีภาพของรูปเมื่อเม้าส์ไปชี้ */
@@ -223,7 +223,7 @@ button {
   margin-left: 220px;
   padding: 1rem;
   text-wrap: wrap; /* ข้อความขึ้นบรรทัดใหม่เมื่อเต็ม */
-  transition: background-color color filter var(--delay-second) ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
+  transition: all var(--delay-second) ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
   p {
     a.button {
       color: var(--color-button-text); /* สีข้อความ */
@@ -235,7 +235,7 @@ button {
       border-radius: 7.5px; /* มุมโค้งของปุ่ม */
       border-style: solid; /* ขนาดขอบปุ่ม */
       border-color: var(--color-button-text); /* สีขอบปุ่ม */
-      transition: background-color color filter var(--delay-second) ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
+      transition: all var(--delay-second) ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
     }
     a.button:hover {
       background-color: var(--color-button-hover-bg); /* สีพื้นหลังเมื่อเม้าส์ไปชี้ */
