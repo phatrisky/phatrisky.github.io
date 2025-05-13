@@ -40,7 +40,7 @@ header.top-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: sticky;
   z-index: 2000;
   max-height: 30px;
 }
