@@ -36,7 +36,7 @@ header.top-bar {
   background-color: var(--color-background); /* สีพื้นหลัง */
   border-bottom-style:solid;
   border-color: var(--color-border);
-  padding: 0.6rem 2rem;
+  padding: 1.2rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -265,6 +265,12 @@ button {
 @media (max-width: 768px) {
   .menu-toggle {
       display: block;
+  }
+
+  img[src*="logo"] {
+  width: 48%;
+  height: auto;
+  display: flex;
   }
 
   header h1 {
