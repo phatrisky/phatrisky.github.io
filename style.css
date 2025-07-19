@@ -131,6 +131,7 @@ img.invert {
 }
 
 .header-buttons {
+  position: sticky;
   display: flex;
   gap: 0.5rem;
   button {
@@ -208,9 +209,23 @@ main.content {
 
 @keyframes logospin {
   0% {
+    filter: drop-shadow(0 0 5rem var(--color-button-bg)); /* เงาโลโก้ */
     transform: rotate(0deg); /* เริ่มต้นที่ 0 องศา */
   }
+  25% {
+    filter: drop-shadow(0 0 5rem var(--color-border)); /* เงาโลโก้ */
+    transform: rotate(90deg); /* หมุน 90 องศา */
+  }
+  50% {
+    filter: drop-shadow(0 0 5rem var(--color-button-bg)); /* เงาโลโก้ */
+    transform: rotate(180deg); /* หมุนครึ่งรอบ */
+  }
+  75% {
+    filter: drop-shadow(0 0 5rem var(--color-border)); /* เงาโลโก้ */
+    transform: rotate(270deg); /* หมุน 270 องศา */
+  }
   100% {
+    filter: drop-shadow(0 0 5rem var(--color-button-bg)); /* เงาโลโก้ */
     transform: rotate(360deg); /* หมุนครบ 360 องศา */
   }
 }
@@ -222,7 +237,18 @@ main.content img.header-logo {
   align-items: center; /* จัดตำแหน่งโลโก้ให้อยู่ตรงกลาง */
   margin: 0 auto; /* จัดตำแหน่งโลโก้ให้อยู่ตรงกลาง */
   padding: 0.5rem; /* ระยะห่างรอบๆ โลโก้ */
+  filter: drop-shadow(0 0 5rem var(--color-button-bg)); /* เงาโลโก้ */
   animation: logospin 5s linear infinite; /* การหมุนโลโก้ */
+}
+
+main.content img.invert {
+  width: 40%; /* ขนาดของโลโก้ */
+  height: auto; /* ให้ความสูงปรับตามอัตราส่วน */
+  display: block; /* ทำให้โลโก้แสดงเป็นบล็อก */
+  align-items: center; /* จัดตำแหน่งโลโก้ให้อยู่ตรงกลาง */
+  margin: 0 auto; /* จัดตำแหน่งโลโก้ให้อยู่ตรงกลาง */
+  padding: 0.25rem; /* ระยะห่างรอบๆ โลโก้ */
+  filter: drop-shadow(0 0 2.5rem var(--color-button-bg)) invert(100%); /* เงาโลโก้ */
 }
 
 button {
@@ -249,37 +275,46 @@ button {
   padding: 1rem;
   text-wrap: wrap; /* ข้อความขึ้นบรรทัดใหม่เมื่อเต็ม */
   transition: background-color color filter var(--delay-second) ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
-  p {
-    a.button {
-      color: var(--color-button-text); /* สีข้อความ */
-      padding: 4px 12px; /* ระยะห่างภายในปุ่ม */
-      text-align: center; /* จัดตำแหน่งข้อความ */
-      text-decoration: none; /* ลบขีดเส้นใต้ลิงค์ */
-      display: inline-block; /* ทำให้ปุ่มอยู่ในบรรทัดเดียว */
-      font-size: 16px; /* ขนาดตัวอักษร */
-      border-radius: 7.5px; /* มุมโค้งของปุ่ม */
-      border-style: solid; /* ขนาดขอบปุ่ม */
-      border-color: var(--color-button-text); /* สีขอบปุ่ม */
-      transition: background-color color filter var(--delay-second) ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
-    }
-    a.button:hover {
-      background-color: var(--color-button-hover-bg); /* สีพื้นหลังเมื่อเม้าส์ไปชี้ */
-      color: var(--color-button-hover-text); /* สีข้อความเมื่อเม้าส์ไปชี้ */
-      filter: invert(0%);
-    }
+}
+
+p {
+  a.button {
+    color: var(--color-button-bg); /* สีข้อความ */
+    padding: 4px 12px; /* ระยะห่างภายในปุ่ม */
+    text-align: center; /* จัดตำแหน่งข้อความ */
+    text-decoration: none; /* ลบขีดเส้นใต้ลิงค์ */
+    display: inline-block; /* ทำให้ปุ่มอยู่ในบรรทัดเดียว */
+    font-size: 16px; /* ขนาดตัวอักษร */
+    border-radius: 7.5px; /* มุมโค้งของปุ่ม */
+    transition: all color filter var(--delay-second) ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
   }
+  a.button:hover {
+    color: var(--color-border); /* สีข้อความเมื่อเม้าส์ไปชี้ */
+    filter: invert(0%);
+  }
+}
+
+p.center {
+  text-align: center; /* จัดตำแหน่งข้อความให้อยู่ตรงกลาง */
+  margin: 1rem 0; /* ระยะห่างด้านบนและล่าง */
 }
 
 .footer {
   background-color: var(--color-background); /* สีพื้นหลัง */
   border-top-style: solid;
   border-color: var(--color-border);
-  padding: 1rem;
+  padding: 1rem 0;
   text-align: center;
-  position: fixed;
+  position: static;
   bottom: 0;
   width: 100%;
   z-index: 2000;
+}
+
+.footer img.invert {
+  width: 100px; /* ขนาดของโลโก้ */
+  height: auto; /* ให้ความสูงปรับตามอัตราส่วน */
+  display: inline-block; /* ทำให้โลโก้แสดงเป็นบล็อก */
 }
 
 @media (max-width: 768px) {
@@ -385,5 +420,9 @@ button {
 
   img.invert {
     filter: invert(0%); /* ไม่ต้องกลับสีสำหรับโหมดสว่าง */
+  }
+
+  main.content img.invert {
+    filter: drop-shadow(0 0 2.5rem var(--color-button-bg)) invert(0%); /* เงาโลโก้ */
   }
 }
