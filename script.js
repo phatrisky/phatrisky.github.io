@@ -14,3 +14,13 @@ document.addEventListener('click', function(event) {
         mainArea.classList.remove('active');
     }
 });
+
+const mediaDarkTheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+mediaQuery.addEventListener('change', (event) => {
+  if (event.matches) {
+    document.querySelector('img.header-logo').src = 'svg-logo/logo-light.svg';
+  } else {
+    document.querySelector('img.header-logo').src = 'svg-logo/logo-dark.svg';
+  }
+});

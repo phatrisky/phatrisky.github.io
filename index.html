@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Phattisu</title>
+    <title>Phattisu - home</title>
     <!-- ไอคอนเว็บ -->
-    <link rel="icon" href="svg-logo/phattisu-icon.svg" type="image/svg">
+    <link id="favicon-light" rel="icon" href="svg-logo/logo-dark.svg" type="image/svg" media="(prefers-color-scheme: light)"> <!-- ไอคอนสำหรับโหมดสว่าง -->
+    <link id="favicon-dark" rel="icon" href="svg-logo/logo-light.svg" type="image-svg" media="(prefers-color-scheme: dark)"> <!-- ไอคอนสำหรับโหมดมืด -->
+    <!-- ลิงค์ Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Inter:400,800,900&display=swap" rel="stylesheet">
     <!-- ลิงค์ไฟล์ CSS -->
     <link rel="stylesheet" href="style.css">
@@ -19,9 +21,9 @@
         <h1>หน้าหลัก</h1>
         <nav id="h" class="header-buttons">
             <ul>
-                <li><a class="iconed" href="https://www.youtube.com/channel/UChJhfABsr5yfHzB2sPtv5ig" > <img class="invert" src="svg-ulogo/youtube-brands-solid.svg" > @phattisu</a></li>
-                <li><a class="iconed" href="https://www.facebook.com/phattisu.naphat.maninil" > <img class="invert" src="svg-ulogo/facebook-brands-solid.svg" > @phattisu</a></li>
-                <li><a href="#" >ปุ่ม 3</a></li>
+                <li><a class="iconed" href="https://www.youtube.com/channel/UChJhfABsr5yfHzB2sPtv5ig" ><img class="invert" src="svg-ulogo/youtube-brands-solid.svg" > @phattisu</a></li>
+                <li><a class="iconed" herf="https://www.facebook.com/phattisu.naphat.maninil"> <img class="invert" src="svg-ulogo/facebook-brands-solid.svg" > @phattisu</a></li>
+                <li><a herf="#">ปุ่ม 3</a></li>
             </ul>
         </nav>
         <button class="menu-toggle" onclick="toggleMenu()" style="font-size: 1rem;">☰</button>
@@ -41,6 +43,7 @@
         </div>
     </aside>
     <main id="main-area" class="content">
+        <img class="header-logo" src="svg-logo/logo-light.svg" alt="Phattisu Logo">
         <h2>สวัสดีครับ</h2>
         <p>ยินดีต้อนรับสู่เว็บไซต์ของเรานะครับ</p>
         <p>ที่นี่เป็นเว็บไซต์ที่ให้ความรู้เกี่ยวกับการเขียนโปรแกรม และเทคโนโลยีต่างๆ</p>
