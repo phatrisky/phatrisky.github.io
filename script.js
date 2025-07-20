@@ -19,8 +19,8 @@ const mediaDarkTheme = window.matchMedia('(prefers-color-scheme: dark)');
 
 mediaQuery.addEventListener('change', (event) => {
   if (event.matches) {
-    document.querySelector('img.header-logo').src = 'svg-logo/logo-light.svg';
+    document.querySelector("img.header-logo").src = "svg-logo/logo-light.svg"; // โลโก้สำหรับโหมดมืด
   } else {
-    document.querySelector('img.header-logo').src = 'svg-logo/logo-dark.svg';
+    document.querySelector("img.header-logo").src = "svg-logo/logo-dark.svg"; // โลโก้สำหรับโหมดสว่าง
   }
 });

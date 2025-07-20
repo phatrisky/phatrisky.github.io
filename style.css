@@ -230,6 +230,29 @@ main.content {
   }
 }
 
+@keyframes logospin-light {
+  0% {
+    filter: drop-shadow(0 0 5rem var(--color-button-bg)) invert(100%); /* เงาโลโก้ */
+    transform: rotate(0deg); /* เริ่มต้นที่ 0 องศา */
+  }
+  25% {
+    filter: drop-shadow(0 0 5rem var(--color-border)) invert(100%); /* เงาโลโก้ */
+    transform: rotate(90deg); /* หมุน 90 องศา */
+  }
+  50% {
+    filter: drop-shadow(0 0 5rem var(--color-button-bg)) invert(100%); /* เงาโลโก้ */
+    transform: rotate(180deg); /* หมุนครึ่งรอบ */
+  }
+  75% {
+    filter: drop-shadow(0 0 5rem var(--color-border)) invert(100%); /* เงาโลโก้ */
+    transform: rotate(270deg); /* หมุน 270 องศา */
+  }
+  100% {
+    filter: drop-shadow(0 0 5rem var(--color-button-bg)) invert(100%); /* เงาโลโก้ */
+    transform: rotate(360deg); /* หมุนครบ 360 องศา */
+  }
+}
+
 main.content img.header-logo {
   width: 40%; /* ขนาดของโลโก้ */
   height: auto; /* ให้ความสูงปรับตามอัตราส่วน */
@@ -393,16 +416,6 @@ p.center {
     border-bottom-color: var(--color-border); /* สีขอบสำหรับโหมดสว่าง */
   }
 
-  nav ul li a {
-    background-color: var(--color-button-text); /* สีพื้นหลังปุ่มสำหรับโหมดสว่าง */
-    color: var(--color-button-bg); /* สีข้อความปุ่มสำหรับโหมดสว่าง */
-  }
-
-  nav ul li a:hover {
-    background-color: var(--color-button-hover-text); /* สีพื้นหลังปุ่มเมื่อเม้าส์ไปชี้สำหรับโหมดสว่าง */
-    color: var(--color-button-hover-bg); /* สีข้อความปุ่มเมื่อเม้าส์ไปชี้สำหรับโหมดสว่าง */
-  }
-
   .side-bar {
     background-color: var(--color-text); /* สีพื้นหลังสำหรับโหมดสว่าง */
     border-right-color: var(--color-border); /* สีขอบสำหรับโหมดสว่าง */
@@ -422,7 +435,12 @@ p.center {
     filter: invert(0%); /* ไม่ต้องกลับสีสำหรับโหมดสว่าง */
   }
 
-  main.content img.invert {
-    filter: drop-shadow(0 0 2.5rem var(--color-button-bg)) invert(0%); /* เงาโลโก้ */
+  main.content {
+    img.invert {
+      filter: drop-shadow(0 0 2.5rem var(--color-button-bg)) invert(0%); /* เงาโลโก้ */
+    }
+    img.header-logo {
+      animation: logospin-light 5s linear infinite; /* การหมุนโลโก้ */
+    }
   }
 }
