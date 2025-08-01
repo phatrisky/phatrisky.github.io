@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.0"
+   width="400pt"
+   height="400pt"
+   viewBox="0 0 400 400"
+   preserveAspectRatio="xMidYMid"
+   id="svg80"
+   sodipodi:docname="sensorystar-solid-color.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs84" />
+  <sodipodi:namedview
+     id="namedview82"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="pt"
+     showgrid="false"
+     inkscape:zoom="0.88883322"
+     inkscape:cx="-11.81324"
+     inkscape:cy="345.95917"
+     inkscape:window-width="960"
+     inkscape:window-height="1012"
+     inkscape:window-x="960"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg80"
+     showguides="true" />
+  <metadata
+     id="metadata60">
+Created by potrace 1.16, written by Peter Selinger 2001-2019
+</metadata>
+  <g
+     id="g832"
+     transform="matrix(1.0432586,0,0,1.0432546,-64.577605,-69.60668)">
+    <g
+       id="g814"
+       style="fill:#eb1958;fill-opacity:1">
+      <path
+         style="fill:#eb1958;fill-opacity:1;stroke-width:0.686023"
+         d="m 193.07813,335.81543 v 114.3208 h 52.34472 v -114.3208 z"
+         id="path757" />
+      <path
+         style="fill:#eb1958;fill-opacity:1;stroke-width:0.686023"
+         d="m 193.08984,208.7915 v 46.4209 h -0.0117 v 11.40088 H 61.899902 v 52.34473 h 62.370118 v -0.0366 h 56.05225 L 241.771,257.47266 Z"
+         id="path751" />
+      <path
+         style="fill:#eb1958;fill-opacity:1;stroke-width:0.686023"
+         d="m 376.83398,197.89893 v 0.0835 h -51.68261 l -59.49024,59.49024 48.45703,48.45703 v -55.73584 h 16.89405 v 0.0498 h 114.30175 v -52.34472 z"
+         id="path749" />
+      <path
+         style="fill:#eb1958;fill-opacity:1;stroke-width:0.686023"
+         d="M 261.79102,66.720703 V 181.08838 h 52.34619 V 66.720703 Z"
+         id="path745" />
+    </g>
+    <g
+       id="g820"
+       style="fill:#ffc445;fill-opacity:1">
+      <path
+         style="fill:#ffc445;fill-opacity:1;stroke-width:0.686023"
+         d="m 253.7168,269.41846 -49.50293,49.50293 h 51.30322 v 0.0366 h 6.27393 v 131.17822 h 52.34619 V 381.4409 h -0.019 v -51.61963 z"
+         id="path755" />
+      <path
+         style="fill:#ffc445;fill-opacity:1;stroke-width:0.686023"
+         d="m 331.01221,266.61328 v 52.34473 h 114.30175 v -52.34473 z"
+         id="path753" />
+      <path
+         style="fill:#ffc445;fill-opacity:1;stroke-width:0.686023"
+         d="m 61.899902,197.89893 v 52.34472 H 176.1958 v -52.34472 z"
+         id="path747" />
+      <path
+         style="fill:#ffc445;fill-opacity:1;stroke-width:0.686023"
+         d="m 193.07813,66.720703 v 57.243167 h 0.0117 v 60.93603 l 60.62696,60.62696 47.54297,-47.54444 H 245.5869 v -0.0835 h -0.16406 V 66.720703 Z"
+         id="rect501" />
+    </g>
+  </g>
+</svg>
