@@ -34,11 +34,11 @@ header.top-bar {
   border-color: var(--color-border);
   position: fixed; /* ทำให้แถบอยู่ด้านบน */
   z-index: 2000;
-  width: 100%;
+  width: calc(100% - 3rem);
   max-height: 30px; /* ความสูงสูงสุดของแถบ */
-  padding: 0.75rem 0;
+  padding: 0.75rem 1.5rem;
   display: flex;
-  justify-content: space-around; /* จัดตำแหน่งให้อยู่ตรงกลาง */
+  justify-content: space-between; /* จัดตำแหน่งให้อยู่ตรงกลาง */
   align-items: center;
 }
 
